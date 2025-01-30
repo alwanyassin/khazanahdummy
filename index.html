@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khazanah Ramadan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tambahkan kelas CSS untuk navbar transparan */
+        .transparent-nav {
+            background-color: rgba(255, 255, 255, 0.5) !important;
+            /* Transparansi 50% */
+            backdrop-filter: blur(10px);
+            /* Efek blur untuk transparansi */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transparent-nav shadow-md py-4 mt-4">
+        <!-- Tambahkan mt-4 untuk menggeser navbar ke bawah -->
+        <div class="container mx-auto flex justify-end items-center px-4">
+            <a href="#" class="text-2xl font-bold mr-auto px-4">Khazanah Ramadan</a>
+            <div class="space-x-6 mx-4">
+                <a href="#" class="text-gray-700 hover:text-black">Kabar Ramadan</a>
+                <a href="#" class="text-gray-700 hover:text-black">Khazanah</a>
+                <a href="#" class="text-gray-700 hover:text-black">Resep</a>
+                <a href="#" class="text-gray-700 hover:text-black">Mudik Yuk!</a>
+            </div>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Tanya Ustadz</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-screen bg-cover bg-center"
+        style="background-image: url('https://picsum.photos/1600/900');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative z-10 flex flex-col justify-center items-start h-full px-10 text-white">
+            <h1 class="text-5xl font-bold">Kabar Ramadan: Simak Uniknya Ramadan di Selandia Baru</h1>
+            <p class="mt-4 max-w-lg">Laporan khusus dari Selandia Baru, berpuasa lebih dari 17 jam dengan muslim dari
+                Wellington yang penuh keunikan</p>
+            <button class="mt-6 px-6 py-2 bg-white text-black font-semibold rounded-md">SELENGKAPNYA</button>
+        </div>
+    </section>
+
+    <!-- Khazanah Section -->
+    <section class="py-16 px-10 bg-white w-full h-screen">
+        <h2 class="text-3xl font-bold">KHAZANAH</h2>
+        <div class="border-t-2 border-black my-4"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div>
+                <h3 class="font-semibold">Kapan waktu yang tepat untuk tidur saat puasa?</h3>
+                <p class="text-gray-500">Jatimnetwork.com</p>
+                <img src="https://picsum.photos/400/300?random=1" alt="Artikel 1" class="mt-2 w-full rounded-md">
+            </div>
+            <div>
+                <h3 class="font-semibold">Hukum nonton film syur saat puasa</h3>
+                <p class="text-gray-500">Suaramerdeka.com</p>
+                <img src="https://picsum.photos/400/300?random=2" alt="Artikel 2" class="mt-2 w-full rounded-md">
+            </div>
+            <div>
+                <h3 class="font-semibold">Bagaimana caranya berbuat baik lebih saat puasa</h3>
+                <p class="text-gray-500">Akurat.co</p>
+                <img src="https://picsum.photos/400/300?random=3" alt="Artikel 3" class="mt-2 w-full rounded-md">
+            </div>
+            <div>
+                <h3 class="font-semibold">Motret orang tanpa izin apakah membatalkan puasa?</h3>
+                <p class="text-gray-500">KlikPendidikan.com</p>
+                <img src="https://picsum.photos/400/300?random=4" alt="Artikel 4" class="mt-2 w-full rounded-md">
+            </div>
+        </div>
+        <div class="flex justify-center mt-8">
+            <button class="px-6 py-2 border border-black font-semibold rounded-md">SEMUA ARTIKEL</button>
+        </div>
+    </section>
+</body>
+
+</html>
