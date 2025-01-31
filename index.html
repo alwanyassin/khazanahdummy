@@ -6,75 +6,536 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khazanah Ramadan</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <style>
-        /* Tambahkan kelas CSS untuk navbar transparan */
-        .transparent-nav {
-            background-color: rgba(255, 255, 255, 0.5) !important;
-            /* Transparansi 50% */
-            backdrop-filter: blur(10px);
-            /* Efek blur untuk transparansi */
+        .swiper-pagination-bullet {
+            background-color: white;
+            opacity: 0.5;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white;
+            background-color: rgb(0, 0, 0);
+            /* padding: 30px 20px; */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 20px;
         }
     </style>
+
 </head>
 
-<body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 transparent-nav shadow-md py-4 mt-4">
-        <!-- Tambahkan mt-4 untuk menggeser navbar ke bawah -->
-        <div class="container mx-auto flex justify-end items-center px-4">
-            <a href="#" class="text-2xl font-bold mr-auto px-4">Khazanah Ramadan</a>
-            <div class="space-x-6 mx-4">
-                <a href="#" class="text-gray-700 hover:text-black">Kabar Ramadan</a>
-                <a href="#" class="text-gray-700 hover:text-black">Khazanah</a>
-                <a href="#" class="text-gray-700 hover:text-black">Resep</a>
-                <a href="#" class="text-gray-700 hover:text-black">Mudik Yuk!</a>
-            </div>
-            <button class="bg-blue-600 text-white px-4 py-2 rounded">Tanya Ustadz</button>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 z-50 w-full bg-white backdrop-filter backdrop-blur-xs bg-opacity-50">
+        <div class="container flex h-32 items-center justify-between px-4">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="asset/img/logo.png" alt="Khazanah Ramadan Logo" class="ml-32 h-24 object-contain">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 ml-auto">
+                <a href="#" class="text-2xl font-medium">Kabar Ramadan</a>
+                <a href="#" class="text-2xl font-medium">Khazanah</a>
+                <a href="#" class="text-2xl font-medium">Resep</a>
+                <a href="#" class="text-2xl font-medium">Mudik Yuk!</a>
+                <a href="#" class="bg-[#2B4162] text-white px-4 py-4 text-2xl font-medium">Tanya
+                    Ustadz</a>
+            </nav>
         </div>
-    </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <div class="swiper h-screen">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section class="relative h-screen bg-cover bg-center"
+                        style="background-image: url('/asset/img/ramadan1.jpg')">
+                        <div class="absolute inset-0 "></div>
+                        <div class="container relative z-10 flex h-full flex-col justify-center px-32">
+                            <h1 class="max-w-3xl text-4xl sm:text-5xl font-bold leading-tight">
+                                Kabar Ramadan: Simak Uniknya Ramadan di Selandia Baru
+                            </h1>
+                            <p class="mt-4 max-w-2xl text-base sm:text-lg">
+                                Laporan khusus dari Selandia Baru, berpuasa lebih dari 17 jam dengan muslim dari
+                                Wellington yang
+                                penuh keunikan
+                            </p>
+                            <a href="#"
+                                class="mt-8 inline-flex w-fit items-center border border-gray-800 bg-white/10 px-6 py-2.5 text-sm font-semibold hover:bg-white/20">
+                                SELENGKAPNYA
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="relative h-screen bg-cover bg-center"
+                        style="background-image: url('/asset/img/ramadan2.jpg')">
+                        <div class="absolute inset-0 "></div>
+                        <div class="container relative z-10 flex h-full flex-col justify-center px-32">
+                            <h1 class="max-w-3xl text-4xl sm:text-5xl font-bold leading-tight">
+                                Tradisi Ramadan di Indonesia: Keberagaman dalam Kebersamaan
+                            </h1>
+                            <p class="mt-4 max-w-2xl text-base sm:text-lg">
+                                Menjelajahi keunikan tradisi Ramadan di berbagai daerah Indonesia, dari Sabang sampai
+                                Merauke
+                            </p>
+                            <a href="#"
+                                class="mt-8 inline-flex w-fit items-center border border-gray-800 bg-white/10 px-6 py-2.5 text-sm font-semibold hover:bg-white/20">
+                                SELENGKAPNYA
+                            </a>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="relative h-screen bg-cover bg-center"
+                        style="background-image: url('/asset/img/ramadan3.jpg')">
+                        <div class="absolute inset-0 "></div>
+                        <div class="container relative z-10 flex h-full flex-col justify-center px-32">
+                            <h1 class="max-w-3xl text-4xl sm:text-5xl font-bold leading-tight">
+                                Inovasi Teknologi untuk Ibadah Ramadan
+                            </h1>
+                            <p class="mt-4 max-w-2xl text-base sm:text-lg">
+                                Bagaimana teknologi modern membantu umat Muslim menjalani ibadah Ramadan dengan lebih
+                                mudah dan bermakna
+                            </p>
+                            <a href="#"
+                                class="mt-8 inline-flex w-fit items-center border border-gray-800 bg-white/10 px-6 py-2.5 text-sm font-semibold hover:bg-white/20">
+                                SELENGKAPNYA
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next mr-32"></div>
+        </div>
 
-    <!-- Hero Section -->
-    <section class="relative w-full h-screen bg-cover bg-center"
-        style="background-image: url('https://picsum.photos/1600/900');">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative z-10 flex flex-col justify-center items-start h-full px-10 text-white">
-            <h1 class="text-5xl font-bold">Kabar Ramadan: Simak Uniknya Ramadan di Selandia Baru</h1>
-            <p class="mt-4 max-w-lg">Laporan khusus dari Selandia Baru, berpuasa lebih dari 17 jam dengan muslim dari
-                Wellington yang penuh keunikan</p>
-            <button class="mt-6 px-6 py-2 bg-white text-black font-semibold rounded-md">SELENGKAPNYA</button>
-        </div>
-    </section>
+        <!-- Ramadan News Section -->
+        <section class="py-16" id="kabar-ramadan">
+            <div class="container px-4 mx-auto">
+                <h2
+                    class="mb-8 text-3xl font-bold after:inline-block after:content-[''] after:border-t-[.3rem] after:border-gray-800 after:w-full after:ml-8 after:translate-y-[-0.5rem] overflow-hidden whitespace-nowrap">
+                    KABAR RAMADAN</h2>
+                <!-- Articles Grid -->
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <!-- Left Column - Vertical Articles (1/3 width) -->
+                    <div class="flex flex-col gap-8">
+                        <!-- Article 1 -->
+                        <article class="group cursor-pointer flex-1">
+                            <div class="mb-4 overflow-hidden h-[200px]">
+                                <img src="asset/img/img30.jpg" alt="Takjil di Tangerang"
+                                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <h2 class="mb-2 text-xl font-semibold text-gray-900">Ini Dia Lokasi Takjil Terkenal di
+                                Tangerang</h2>
+                            <p class="text-sm text-gray-600">Ayojakarta.com</p>
+                        </article>
 
-    <!-- Khazanah Section -->
-    <section class="py-16 px-10 bg-white w-full h-screen">
-        <h2 class="text-3xl font-bold">KHAZANAH</h2>
-        <div class="border-t-2 border-black my-4"></div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-                <h3 class="font-semibold">Kapan waktu yang tepat untuk tidur saat puasa?</h3>
-                <p class="text-gray-500">Jatimnetwork.com</p>
-                <img src="https://picsum.photos/400/300?random=1" alt="Artikel 1" class="mt-2 w-full rounded-md">
+                        <!-- Article 2 -->
+                        <article class="group cursor-pointer flex-1">
+                            <div class="mb-4 overflow-hidden h-[200px]">
+                                <img src="asset/img/img33.jpg" alt="Dekorasi Pernikahan"
+                                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                            </div>
+                            <h2 class="mb-2 text-xl font-semibold text-gray-900">Apakah menikah saat puasa membatalkan?
+                            </h2>
+                            <p class="text-sm text-gray-600">Jatimnetwork.com</p>
+                        </article>
+                    </div>
+
+                    <!-- Right Column - Horizontal Articles (2/3 width) -->
+                    <div class="lg:col-span-2 flex flex-col lg:h-full">
+                        <!-- Horizontal Articles Container -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:h-full">
+                            <!-- Article 3 -->
+                            <article class="group cursor-pointer flex flex-col">
+                                <div class="mb-4 overflow-hidden flex-grow">
+                                    <img src="asset/img/img32.jpg" alt="Gorengan dan Minuman"
+                                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div>
+                                    <h2 class="mb-2 text-lg font-semibold text-gray-900">Berbuka dengan gorengan, apa
+                                        kata dokter?</h2>
+                                    <p class="text-sm text-gray-600">Kilat.com</p>
+                                </div>
+                            </article>
+
+                            <!-- Article 4 -->
+                            <article class="group cursor-pointer flex flex-col">
+                                <div class="mb-4 overflow-hidden flex-grow">
+                                    <img src="asset/img/img31.jpg" alt="Hotel di Bandung"
+                                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div>
+                                    <h2 class="mb-2 text-lg font-semibold text-gray-900">Ini Daftar Hotel di Bandung
+                                        yang gelar promo bukber</h2>
+                                    <p class="text-sm text-gray-600">Korangala.com</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#"
+                        class="inline-flex items-center border border-gray-800 px-6 py-2.5 text-sm font-semibold hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                        SEMUA ARTIKEL
+                    </a>
+                </div>
             </div>
-            <div>
-                <h3 class="font-semibold">Hukum nonton film syur saat puasa</h3>
-                <p class="text-gray-500">Suaramerdeka.com</p>
-                <img src="https://picsum.photos/400/300?random=2" alt="Artikel 2" class="mt-2 w-full rounded-md">
+        </section>
+
+
+        <!-- Khazanah Section -->
+        <section class="py-16">
+            <div class="container px-4 mx-auto">
+                <h2
+                    class="mb-8 text-3xl font-bold after:inline-block after:content-[''] after:border-t-[.3rem] after:border-gray-800 after:w-full after:ml-8 after:translate-y-[-0.5rem] overflow-hidden whitespace-nowrap">
+                    KHAZANAH</h2>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <!-- Article 1 -->
+                    <a href="#" class="group">
+                        <h3 class="font-medium text-xl">Kapan waktu yang tepat untuk tidur saat puasa?</h3>
+                        <p class="text-sm text-gray-600">Jatimnetwork.com</p>
+                        <div class="mt-8 relative h-100 overflow-hidden">
+                            <img src="/asset/img/img23.jpg" alt="Article 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                    </a>
+                    <!-- Article 1 -->
+                    <a href="#" class="group">
+                        <h3 class="font-medium text-xl">Hukum nonton film syur saat puasa di siang hari</h3>
+                        <p class="text-sm text-gray-600">Suaramerdeka.com</p>
+                        <div class="mt-8 relative h-100 overflow-hidden">
+                            <img src="/asset/img/img24.jpg" alt="Article 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                    </a>
+                    <!-- Article 1 -->
+                    <a href="#" class="group">
+                        <h3 class="font-medium text-xl">Bagaimana caranya berbuat baik lebih saat puasa</h3>
+                        <p class="text-sm text-gray-600">Akurat.co</p>
+                        <div class="mt-8 relative h-100 overflow-hidden">
+                            <img src="/asset/img/img25.jpg" alt="Article 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                    </a>
+                    <!-- Article 1 -->
+                    <a href="#" class="group">
+                        <h3 class="font-medium text-xl">Motret orang tanpa izin apakah membatalkan puasa?</h3>
+                        <p class="text-sm text-gray-600">KlikPendidikan.id</p>
+                        <div class="mt-8 relative h-100 overflow-hidden">
+                            <img src="/asset/img/img26.jpg" alt="Article 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                        </div>
+                    </a>
+                    <!-- Repeat for other articles -->
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#"
+                        class="inline-flex items-center border border-gray-800 px-6 py-2.5 text-sm font-semibold hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                        SEMUA ARTIKEL
+                    </a>
+                </div>
             </div>
-            <div>
-                <h3 class="font-semibold">Bagaimana caranya berbuat baik lebih saat puasa</h3>
-                <p class="text-gray-500">Akurat.co</p>
-                <img src="https://picsum.photos/400/300?random=3" alt="Artikel 3" class="mt-2 w-full rounded-md">
+        </section>
+
+
+        <!-- Recipe Section -->
+        <section class="bg-gray-50 py-16">
+            <div class="container px-4 mx-auto">
+                <h2
+                    class="mb-8 text-3xl font-bold after:inline-block after:content-[''] after:border-t-[.3rem] after:border-gray-800 after:w-full after:ml-8 after:translate-y-[-0.5rem] overflow-hidden whitespace-nowrap">
+                    RESEP SAHUR DAN BERBUKA ALA CHEF</h2>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <!-- Recipe 1 -->
+                    <a href="#" class="group">
+                        <div class="relative h-[500px] overflow-hidden">
+                            <img src="asset/img/img37.jpg" alt="Recipe 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Chicken Rasa Iga</h3>
+                                <p class="text-sm text-gray-300">INSPIRANESIA.COM</p>
+                            </div>
+                        </div>
+                        <!-- <h3 class="mt-4 font-medium">Chicken Rasa Iga</h3>
+                        <p class="mt-2 text-sm text-gray-600">INSPIRANESIA.COM</p> -->
+                    </a>
+                    <!-- Recipe 1 -->
+                    <a href="#" class="group">
+                        <div class="relative h-[500px] overflow-hidden">
+                            <img src="asset/img/img38.jpg" alt="Recipe 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Aneka Jus Guna Takjil</h3>
+                                <p class="text-sm text-gray-300">HOPS.ID</p>
+                            </div>
+                        </div>
+                        <!-- <h3 class="mt-4 font-medium">Chicken Rasa Iga</h3>
+                        <p class="mt-2 text-sm text-gray-600">INSPIRANESIA.COM</p> -->
+                    </a>
+                    <!-- Recipe 1 -->
+                    <a href="#" class="group">
+                        <div class="relative h-[500px] overflow-hidden">
+                            <img src="asset/img/img39.jpg" alt="Recipe 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Makaroni Keju Ala Hotel</h3>
+                                <p class="text-sm text-gray-300">METROJAMBI.COM</p>
+                            </div>
+                        </div>
+                        <!-- <h3 class="mt-4 font-medium">Chicken Rasa Iga</h3>
+                        <p class="mt-2 text-sm text-gray-600">INSPIRANESIA.COM</p> -->
+                    </a>
+                    <!-- Repeat for other recipes -->
+                </div>
+                <div class="mt-12 text-center">
+                    <div class="flex justify-center gap-2">
+                        <span class="h-2 w-8 rounded-full bg-gray-900"></span>
+                        <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+                        <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+                        <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+                        <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="font-semibold">Motret orang tanpa izin apakah membatalkan puasa?</h3>
-                <p class="text-gray-500">KlikPendidikan.com</p>
-                <img src="https://picsum.photos/400/300?random=4" alt="Artikel 4" class="mt-2 w-full rounded-md">
+        </section>
+
+        <!-- Travel Section -->
+        <section class="bg-gray-50 py-16">
+            <div class="container px-4 mx-auto">
+                <h2
+                    class="mb-8 text-3xl font-bold after:inline-block after:content-[''] after:border-t-[.3rem] after:border-gray-800 after:w-full after:ml-8 after:translate-y-[-0.5rem] overflow-hidden whitespace-nowrap">
+                    MUDIK YUK!</h2>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <!-- Location 1 -->
+                    <div>
+                        <div class="relative h-[300px] overflow-hidden">
+                            <img src="/asset/img/travel1.jpg" alt="Location 1" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Lingkar Nagreg</h3>
+                                <p class="text-sm text-gray-300">AYOBANDUNG.COM</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">NAGREK PADAT MERAYAP SEJAK 12 JAM LALU</p>
+                            </a>
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">5 RESTORAN ENAK SEKITAR NAGREG</p>
+                            </a>
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">12 MOBIL TERJEBAK JALUR TIKUS NAGREK</p>
+                            </a>
+                            <!-- Repeat for other articles -->
+                        </div>
+                    </div>
+                    <!-- Location 1 -->
+                    <div>
+                        <div class="relative h-[300px] overflow-hidden">
+                            <img src="/asset/img/travel2.jpg" alt="Location 1" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Simpang Jomin</h3>
+                                <p class="text-sm text-gray-300">GORAJUARA.COM</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">KULINER KHAS SIMPANG JOMIN YANG BIKIN LIDAH GOYANG</p>
+                            </a>
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">LIVE: LIPUTAN DARI SIMPANG JOMIN PANTAUAN KENDARAAN</p>
+                            </a>
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">KAPAN WAKTU YANG TEPAT UNTUK MUDIK?</p>
+                            </a>
+                            <!-- Repeat for other articles -->
+                        </div>
+                    </div>
+                    <!-- Location 1 -->
+                    <div>
+                        <div class="relative h-[300px] overflow-hidden">
+                            <img src="/asset/img/travel3.jpg" alt="Location 1" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Tol Cipali</h3>
+                                <p class="text-sm text-gray-300">PANTURANEWS.COM</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">CEK REST AREA SEPANJANG TOLL CIPALI DISINI</p>
+                            </a>
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">SEGINI TARIF DARI CIPALI MENUJU JAKARTA</p>
+                            </a>
+                            <a href="#" class="block border-b-4 border-black border-dotted pb-4">
+                                <p class="font-medium">SIMAK TIPS ANTI LELAH LEWAT TOLL CIPALI</p>
+                            </a>
+                            <!-- Repeat for other articles -->
+                        </div>
+                    </div>
+                    <!-- Repeat for other locations -->
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#"
+                        class="inline-flex items-center border border-gray-800 px-6 py-2.5 text-sm font-semibold hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                        SEMUA ARTIKEL
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ustadz Section -->
+        <section class="py-16">
+            <div class="container px-4 mx-auto">
+                <h2
+                    class="mb-8 text-3xl font-bold after:inline-block after:content-[''] after:border-t-[.3rem] after:border-gray-800 after:w-full after:ml-8 after:translate-y-[-0.5rem] overflow-hidden whitespace-nowrap">
+                    TANYA USTADZ</h2>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <!-- Ustadz 1 -->
+                    <a href="#" class="group">
+                        <div class="relative h-[600px] overflow-hidden">
+                            <img src="/asset/img/img49.jpg" alt="Ustadz 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Ustadz Alwan Yassin</h3>
+                                <p class="text-sm text-gray-300">BANDUNG</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Ustadz 1 -->
+                    <a href="#" class="group">
+                        <div class="relative h-[600px] overflow-hidden">
+                            <img src="/asset/img/img51.jpg" alt="Ustadz 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Ustadzah Vera Andriani</h3>
+                                <p class="text-sm text-gray-300">JAMBI</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Ustadz 1 -->
+                    <a href="#" class="group">
+                        <div class="relative h-[600px] overflow-hidden">
+                            <img src="/asset/img/img50.jpg" alt="Ustadz 1"
+                                class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                            <div class="absolute bottom-0 w-full bg-gray-900 p-4">
+                                <h3 class="text-lg font-medium text-white">Ustadz M. Rifqi Hanapi</h3>
+                                <p class="text-sm text-gray-300">SEMARANG</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Repeat for other ustadz -->
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#"
+                        class="inline-flex items-center border border-gray-800 px-6 py-2.5 text-sm font-semibold hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                        SEMUA VIDEO
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex-grow container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                    <div class="space-y-2 mx-auto">
+                        <!-- <h1 class="font-script text-6xl md:text-7xl text-gray-800">Khazanah</h1>
+                        <p class="font-display text-3xl md:text-4xl text-blue-900">RAMADAN</p> -->
+                        <img src="/asset/img/logo.png" alt="Ramadan Lantern and Crescent Moon" class="w-[500px]">
+                    </div>
+                    <p class="text-gray-700 leading-relaxed max-w-xl">
+                        Temukan jadwal imsakiyah, panduan puasa, resep sahur & buka puasa, serta tips menjalani Ramadan
+                        dengan penuh makna. Kami juga menghadirkan inspirasi amalan sunnah, doa harian, serta artikel
+                        Islami yang memperkaya pemahaman keagamaan Anda. Jangan lewatkan update terbaru seputar kegiatan
+                        Ramadan di berbagai daerah! Mari jadikan Ramadan tahun ini lebih bermakna dengan ilmu dan ibadah
+                        yang lebih baik. Selamat menjalankan ibadah puasa!
+                    </p>
+                </div>
+
+                <!-- Right Column -->
+                <div class="relative">
+                    <img src="/asset/img/img55.jpg" alt="Ramadan Lantern and Crescent Moon"
+                        class="w-full rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="text-center mt-12 space-y-2">
+                <p class="text-gray-800">Call 123-456-7890</p>
+                <p class="text-gray-800">
+                    or send a message to
+                    <a href="mailto:hello@reallygreatsite.com"
+                        class="text-blue-900 hover:underline">hello@reallygreatsite.com</a>
+                </p>
+                <button
+                    class="mt-4 px-8 py-3 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300">
+                    GET IN TOUCH
+                </button>
             </div>
         </div>
-        <div class="flex justify-center mt-8">
-            <button class="px-6 py-2 border border-black font-semibold rounded-md">SEMUA ARTIKEL</button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e3a6e] text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center text-sm">
+                <div class="space-x-4 mb-4 lg:mb-0">
+                    <a href="#" class="hover:underline">TENTANG KAMI</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">REDAKSI</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">INFO IKLAN</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">KARIR</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">KONTAK</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">PEDOMAN MEDIA SIBER</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">PEDOMAN AI</a>
+                    <span>|</span>
+                    <a href="#" class="hover:underline">PRIVACY</a>
+                </div>
+                <div class="text-sm">
+                    @PTI 2025
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+            },
+        });
+    </script>
 </body>
 
 </html>
